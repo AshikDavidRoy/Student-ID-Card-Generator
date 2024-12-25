@@ -1,0 +1,317 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: "Roboto", sans-serif;
+    background: url(img/student.gif)  center / cover no-repeat fixed;
+     
+}
+
+.card-container {
+    width: 320px;
+    height: 500px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* .school-info {
+    text-align: right;
+}
+
+.school-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.est-year {
+    font-size: 12px;
+    color: #666;
+} */
+
+
+
+.school-info {
+    text-align: right; /* Align text to the right */
+    width: 100%; /* Ensure it takes up the full width */
+    margin-left: auto; /* Push to the right if it's in a flex container */
+    margin-top: 10px; /* Add spacing between the header and the school info */
+}
+
+.school-name {
+    font-size: 18px; /* Make the school name more prominent */
+    font-weight: bold; /* Make the school name bold */
+    color: #333; /* Dark color for the name */
+    margin-bottom: 5px; /* Space between school name and establishment year */
+}
+
+.est-year {
+    font-size: 12px; /* Smaller font size for the establishment year */
+    color: #666; /* Lighter color for the year */
+}
+
+
+.photo-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.photo-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg, #2980B9, #8a2be2);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+.photo {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+
+.student-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.details {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+/* 
+.detail-row {
+    display: flex;
+    justify-content:space-between;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #444;
+} */
+
+
+/* Style for detail-row */
+.detail-row {
+    display: flex;
+    justify-content: space-between; /* Change this if it still doesn't work */
+    align-items: center; /* Align vertically */
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #444;
+    flex-wrap: wrap; /* Allow the content to wrap if necessary */
+}
+
+/* Style for each span to avoid overlapping */
+.detail-row span {
+    width: 45%; /* Ensures each span takes up at most 45% of the container */
+    word-wrap: break-word; /* Breaks the word to prevent overflow */
+}
+
+/* Ensure the value spans take up the remaining space */
+.detail-row span:first-child {
+    text-align: left;
+}
+
+.detail-row span:last-child {
+    text-align: right;
+}
+
+
+
+
+.detail-row i {
+    width: 20px;
+    color: #8a2be2;
+    margin-right: 10px;
+}
+
+.qr-code {
+    position: absolute;
+    bottom: 147px;
+    right: 120px;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Popup Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 90%;
+}
+
+.close-btn {
+    background: #ff5f57;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Form Container Styles */
+.form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    padding: 10%;
+    border: #333 solid;
+    border-radius: 10px;;
+}
+.h2,
+.form-container input,
+.form-container button {
+    padding: 12px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.form-container input[type="file"] {
+    margin-bottom: 20px;
+}
+
+.form-container input:focus,
+.form-container button:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+.form-container input[type="text"] {
+    background-color: #f9f9f9;
+}
+
+.form-container button {
+    background-color: #2980b9;
+    color: white;
+    cursor: pointer;
+    border: 2px solid #2980b9;
+}
+
+.form-container button:hover {
+    background-color: #1f6f99;
+    border-color: #1f6f99;
+}
+
+/* Add border around form inputs and improve button styles */
+.form-container input,
+.form-container button {
+    border-radius: 8px;
+    padding: 12px;
+    border: 2px solid #ccc;
+}
+
+.form-container input[type="file"] {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+#download-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Hover Effect */
+#download-btn:hover {
+    background-color: #1f6f99;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Focus Effect */
+#download-btn:focus {
+    outline: none;
+    border: 2px solid #1f6f99;
+}
+
+/* Add disabled state for the button */
+#download-btn:disabled {
+    background-color: #b2bec3;
+    color: #7f8c8d;
+    cursor: not-allowed;
+}

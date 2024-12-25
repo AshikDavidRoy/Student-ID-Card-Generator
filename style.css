@@ -1,3 +1,4 @@
+/* Global Styles */
 body,
 html {
     margin: 0;
@@ -6,12 +7,13 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
     font-family: "Roboto", sans-serif;
-    background: url(img/student.gif)  center / cover no-repeat fixed;
     
+    /* Background properties */
+    background: url(img/student.gif) center / cover no-repeat fixed;
 }
 
+/* Card Container */
 .card-container {
     width: 320px;
     height: 500px;
@@ -22,6 +24,7 @@ html {
     position: relative;
 }
 
+/* Card Content */
 .card {
     width: 100%;
     height: 100%;
@@ -32,6 +35,7 @@ html {
     box-sizing: border-box;
 }
 
+/* Header Styles */
 .header {
     width: 100%;
     display: flex;
@@ -51,14 +55,19 @@ html {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* School Info */
 .school-info {
     text-align: right;
+    width: 100%;
+    margin-left: auto;
+    margin-top: 10px;
 }
 
 .school-name {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     color: #333;
+    margin-bottom: 5px;
 }
 
 .est-year {
@@ -66,6 +75,7 @@ html {
     color: #666;
 }
 
+/* Photo Container */
 .photo-container {
     position: relative;
     width: 100%;
@@ -95,31 +105,45 @@ html {
     margin: 20px auto;
 }
 
+/* Student Name */
 .student-name {
     font-size: 20px;
     font-weight: bold;
     color: #333;
 }
 
+/* Details Section */
 .details {
     width: 100%;
     margin-top: 20px;
+    justify-content: space-between;
 }
 
+/* Detail Row Styling */
 .detail-row {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
+    align-items: center;
     font-size: 14px;
     margin-bottom: 8px;
     color: #444;
+    flex-wrap: wrap;
 }
 
-.detail-row i {
-    width: 20px;
-    color: #8a2be2;
-    margin-right: 10px;
+.detail-row span {
+    width: 45%;
+    word-wrap: break-word;
 }
 
+.detail-row span:first-child {
+    text-align: left;
+}
+
+.detail-row span:last-child {
+    text-align: right;
+}
+
+/* QR Code */
 .qr-code {
     position: absolute;
     bottom: 147px;
@@ -134,7 +158,7 @@ html {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Popup Modal Styles */
+/* Popup Modal */
 .modal {
     display: none;
     position: fixed;
@@ -170,7 +194,7 @@ html {
     right: 10px;
 }
 
-/* Form Container Styles */
+/* Form Container */
 .form-container {
     width: 100%;
     display: flex;
@@ -178,8 +202,9 @@ html {
     margin: 20px 0;
     padding: 10%;
     border: #333 solid;
-    border-radius: 10px;;
+    border-radius: 10px;
 }
+
 .h2,
 .form-container input,
 .form-container button {
@@ -217,19 +242,7 @@ html {
     border-color: #1f6f99;
 }
 
-/* Add border around form inputs and improve button styles */
-.form-container input,
-.form-container button {
-    border-radius: 8px;
-    padding: 12px;
-    border: 2px solid #ccc;
-}
-
-.form-container input[type="file"] {
-    border: 2px solid #ccc;
-    border-radius: 8px;
-}
-
+/* Download Button */
 #download-btn {
     padding: 12px 20px;
     font-size: 16px;
@@ -244,21 +257,67 @@ html {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Button Hover Effect */
 #download-btn:hover {
     background-color: #1f6f99;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Button Focus Effect */
 #download-btn:focus {
     outline: none;
     border: 2px solid #1f6f99;
 }
 
-/* Add disabled state for the button */
 #download-btn:disabled {
     background-color: #b2bec3;
     color: #7f8c8d;
     cursor: not-allowed;
+}
+
+/* Responsive Adjustments for Background */
+@media screen and (max-width: 768px) {
+    /* Adjust background properties for smaller screens */
+    body {
+        background-size: contain; /* Ensures background image is resized to fit the screen */
+        background-attachment: scroll; /* Removes the fixed position for better mobile performance */
+    }
+
+    .card-container {
+        width: 90%; /* Adjust card width for smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    /* Adjust photo container */
+    .photo-container {
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* For very small screens, you might want to stack elements or adjust their layout */
+    body {
+        background-size: contain; /* Makes sure the background fits */
+        background-position: center top; /* Adjust position for better visibility */
+    }
+
+    .card-container {
+        width: 95%; /* Make the card even smaller on very small screens */
+        height: auto; /* Let the card height adjust based on content */
+    }
+
+    /* Adjust font sizes and spacing for smaller screens */
+    .school-name {
+        font-size: 16px;
+    }
+
+    .est-year {
+        font-size: 10px;
+    }
+
+    .student-name {
+        font-size: 18px;
+    }
+
+    .photo-container {
+        height: 150px;
+    }
 }

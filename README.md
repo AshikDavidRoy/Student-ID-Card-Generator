@@ -69,12 +69,6 @@ This project is a **Student ID Card Generator** built using HTML, CSS, and JavaS
   
 - **Responsiveness**: Ensuring that the ID card and background image were responsive across all screen sizes required extensive use of CSS media queries, which needed constant fine-tuning.
 
-### Future Improvements
-
-1. **Enhanced Validation**: Add more form validation to ensure that users input data correctly and that required fields are filled.
-2. **Additional Templates**: Allow users to choose from multiple card templates with different colors, layouts, and styles.
-3. **Mobile-Friendly QR Code**: Improve the appearance of the QR code on smaller screens by scaling it appropriately.
-4. **Dark Mode**: Implement a dark mode toggle to change the card's color scheme based on user preference.
 
 ## Conclusion
 
